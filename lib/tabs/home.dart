@@ -52,25 +52,32 @@ class _HomePageState extends State<HomePage> {
               Container(
                 child: Column(
                   children: <Widget>[
-                    Image.network('https://upload.jianshu.io/users/upload_avatars/1689643/ed7b8e2c82a4.png?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96'),
+                    Image.network(
+                        'https://upload.jianshu.io/users/upload_avatars/1689643/ed7b8e2c82a4.png?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96'),
                     Text('这是文本')
                   ],
                 ),
                 width: 100,
               ),
-                 Container(
+              Container(
                 child: Column(
                   children: <Widget>[
-                    Image(image: NetworkImage('https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829163427556.png'),),
+                    Image(
+                      image: NetworkImage(
+                          'https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829163427556.png'),
+                    ),
                     Text('这是文本')
                   ],
                 ),
                 width: 100,
               ),
-                 Container(
+              Container(
                 child: Column(
                   children: <Widget>[
-                    Image(image: NetworkImage('https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829163427556.png'),),
+                    Image(
+                      image: NetworkImage(
+                          'https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829163427556.png'),
+                    ),
                     Text('这是文本')
                   ],
                 ),
@@ -79,7 +86,48 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-
+        SizedBox(
+          height: 15,
+        ),
+        InkWell(
+          child: Container(
+            color: Colors.blueGrey,
+            height: 40,
+            child: Padding(
+              padding: EdgeInsets.fromLTRB(12, 0, 12, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    child: Row(
+                      children: <Widget>[
+                        Icon(
+                          Icons.mail,
+                          color: Colors.lightBlue,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          '我的邮箱',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Icon(
+                    Icons.keyboard_arrow_right,
+                    color: Colors.white,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          onTap: () {
+            print('监听到了啊');
+          },
+        ),        
       ],
     );
   }
